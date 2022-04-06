@@ -1,0 +1,44 @@
+<div class='todo-tasks'>
+  <h1>Add Tasks</h1>
+  <div class="task-input">
+
+    <form action=''>
+      <input
+        type='text'
+        {{on 'input' this.newtext}}
+        value={{this.text}}
+        placeholder='Task info'
+      />
+      <input {{action 'addtask'}} type='submit' value='Submit' />
+    </form>
+    <select
+      name=''
+      value='target.value'
+      id='mon'
+      onchange={{action 'states' value='target.value'}}
+    >
+      <option value='All'>All</option>
+      <option value='completed'>completed</option>
+      <option value='incompleted'>incompleted</option>
+    </select>
+  </div>
+  {{#each this.currenTasks as |task|}}
+    <div class='all-tasks'>
+      <h2>{{task.info}}</h2>
+      {{#if task.completed}}
+        <p>Done</p>
+      {{else}}
+        <p>Pending</p>
+      {{/if}}
+      {{!-- <p>{{task.completed}}</p> --}}
+      <button
+        type='button'
+        class={{if task.completed 'done' 'pending'}}
+        name='wow'
+        {{action 'find' task}}
+      >Completed</button>
+      <button type='button' {{action 'delete' task}}>Delete</button>
+    </div>
+  {{/each}}
+  {{!-- <h1>{{this.text}}</h1> --}}
+</div>

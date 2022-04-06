@@ -1,0 +1,110 @@
+$bt:linear-gradient(
+  45deg,
+  rgb(54, 54, 198),
+  rgb(0, 102, 255)
+);
+
+.todo-tasks{
+  padding: 10px;
+  >h1{
+    text-align: center;
+    margin: 30px;
+  }
+}
+.task-input{
+  // background-color: #762424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input,select{
+    padding: 10px;
+    margin: 20px;
+    background-image:linear-gradient(
+      45deg,
+      rgb(253, 252, 255),
+      rgb(229, 239, 255)
+    ); 
+    box-shadow: 2px 2px 10px 2px rgba(11, 3, 101, 0.112);
+    outline: none;
+    font-weight: bold;
+    background-size: 150% 150%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    color: rgba(24, 5, 100, 0.732);
+    border-radius: 4px;
+    &::placeholder{
+      color: rgba(25, 6, 107, 0.471);
+    }
+  }
+}
+.all-tasks {
+  display: grid;
+  gap: 30px;
+  margin: 10px;
+  //   border: 2px solid rgb(168, 168, 168);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  grid-template-columns: 50% auto 100px 100px;
+  padding: 20px;
+  box-sizing: border-box;
+  // width: 800px;
+  max-width: 1000px;
+  margin: 10px auto;
+  //   background-color: rgb(109, 8, 8);
+  color: rgb(44, 44, 44);
+  align-items: center;
+  
+  > button:nth-child(4) {
+    // background-color: rgb(27, 111, 236);
+    background-image: linear-gradient(
+      45deg,
+      rgb(52, 52, 151),
+      rgb(0, 102, 255)
+    );
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-image: linear-gradient(
+        45deg,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255)
+      );
+      color: rgb(27, 111, 236);
+      border: 2px solid rgb(27, 111, 236);
+    }
+  }
+  > button:nth-child(3) {
+cursor: pointer;
+  }
+  .done {
+    background-image: linear-gradient(45deg, rgb(0, 107, 23), rgb(0, 177, 24));
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px;
+    &:hover {
+      background-image: linear-gradient(
+        45deg,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255)
+      );
+      color: rgb(15, 153, 33);
+      border: 2px solid rgb(15, 153, 33);
+    }
+  }
+  .pending {
+    background-image: linear-gradient(45deg, rgb(183, 3, 3), rgb(244, 94, 94));
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px;
+    &:hover {
+      background-image: linear-gradient(
+        45deg,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255)
+      );
+      color: rgb(205, 21, 21);
+      border: 2px solid rgb(254, 19, 19);
+    }
+  }
+}
