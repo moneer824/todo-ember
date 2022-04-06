@@ -9,8 +9,8 @@
         value={{this.text}}
         placeholder='Task info'
       />
-      <input {{action 'addtask'}} type='submit' value='Submit' />
     </form>
+      <button {{on 'click' this.taskForm.addtask}} >Submit</button>
     <select
       name=''
       value='target.value'
@@ -37,7 +37,7 @@
         name='wow'
         {{action 'find' task}}
       >Completed</button>
-      <button type='button' {{action 'delete' task}}>Delete</button>
+      <button type='button' {{on 'click' (fn this.taskForm.delete task)}}>Delete</button>
     </div>
   {{/each}}
   {{!-- <h1>{{this.text}}</h1> --}}

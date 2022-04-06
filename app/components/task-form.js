@@ -31,26 +31,12 @@ export default class TaskFormComponent extends Component {
 
   @action
   newtext(event) {
-    this.text = event.target.value;
+    this.taskForm.text = event.target.value;
   }
 
   @action
   states(value) {
     this.taskStatus = value;
-  }
-
-  @action
-  addtask() {
-    this.taskForm.tasks.pushObject({ info: this.text, completed: false });
-    this.text = '';
-  }
-
-  @action
-  delete(task) {
-    // this.taskForm.tasks = this.taskForm.tasks.filter((item) => {
-    //   return item.info !== task.info;
-    // });
-    this.taskForm.tasks.removeObject(task)
   }
  
 }
